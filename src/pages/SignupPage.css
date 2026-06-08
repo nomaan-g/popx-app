@@ -1,15 +1,54 @@
 .signup {
   flex: 1;
-  padding: 32px 24px;
+  padding: 52px 24px 36px;
   overflow-y: auto;
 }
 
+.signup__top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.signup__step {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--color-text-muted);
+  padding: 6px 12px;
+  background: rgba(108, 56, 255, 0.06);
+  border-radius: 20px;
+}
+
+.signup__progress {
+  height: 4px;
+  background: rgba(108, 56, 255, 0.1);
+  border-radius: 2px;
+  margin-bottom: 24px;
+  overflow: hidden;
+}
+
+.signup__progress-bar {
+  height: 100%;
+  background: var(--gradient-primary);
+  border-radius: 2px;
+  transition: width 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
 .signup__title {
-  font-size: 20px;
-  font-weight: 700;
+  font-size: 22px;
+  font-weight: 800;
   color: var(--color-text);
-  line-height: 1.4;
+  line-height: 1.35;
   margin-bottom: 28px;
+  letter-spacing: -0.02em;
+}
+
+.signup__highlight {
+  background: var(--gradient-primary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 .signup__form {

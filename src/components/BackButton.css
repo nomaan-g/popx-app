@@ -1,0 +1,23 @@
+.back-btn {
+  width: 40px;
+  height: 40px;
+  border: none;
+  border-radius: 12px;
+  background: rgba(108, 56, 255, 0.08);
+  color: var(--color-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  flex-shrink: 0;
+}
+
+.back-btn:hover {
+  background: rgba(108, 56, 255, 0.15);
+  transform: translateX(-2px);
+}
+
+.back-btn:active {
+  transform: scale(0.95);
+}

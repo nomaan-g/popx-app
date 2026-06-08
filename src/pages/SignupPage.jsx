@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import MobileFrame from '../components/MobileFrame';
+import BackButton from '../components/BackButton';
 import InputField from '../components/InputField';
 import RadioGroup from '../components/RadioGroup';
 import Button from '../components/Button';
@@ -21,11 +22,11 @@ export default function SignupPage() {
     setFormData((prev) => ({ ...prev, [field]: e.target.value }));
   };
 
-  const isFormValid =
-    formData.fullName.trim() !== '' &&
-    formData.phone.trim() !== '' &&
-    formData.email.trim() !== '' &&
-    formData.password.trim() !== '';
+  const requiredFields = [formData.fullName, formData.phone, formData.email, formData.password];
+  const filledCount = requiredFields.filter((f) => f.trim() !== '').length;
+  const progress = (filledCount / requiredFields.length) * 100;
+
+  const isFormValid = filledCount === requiredFields.length;
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -37,8 +38,20 @@ export default function SignupPage() {
   return (
     <MobileFrame>
       <div className="signup">
-        <h1 className="signup__title">Create your PopX account</h1>
-        <form className="signup__form" onSubmit={handleSubmit}>
+        <div className="signup__top page-enter">
+          <BackButton to="/" />
+          <div className="signup__step">Step 3 of 4</div>
+        </div>
+
+        <div className="signup__progress page-enter page-enter-delay-1">
+          <div className="signup__progress-bar" style={{ width: `${progress}%` }} />
+        </div>
+
+        <h1 className="signup__title page-enter page-enter-delay-1">
+          Create your <span className="signup__highlight">PopX</span> account
+        </h1>
+
+        <form className="signup__form page-enter page-enter-delay-2" onSubmit={handleSubmit}>
           <InputField
             id="fullName"
             label="Full Name"
