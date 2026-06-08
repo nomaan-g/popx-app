@@ -85,9 +85,9 @@ export default function ProfilePage() {
           </div>
 
           <p className="profile__bio page-enter page-enter-delay-2">
-            Lorem Ipsum Dolor Sit Amet, Consetetur Sadipscing Elitr, Sed Diam
-            Nonumy Eirmod Tempor Invidunt Ut Labore Et Dolore Magna Aliquyam
-            Erat, Sed Diam
+            Passionate about building great products and helping teams succeed.
+            Based in New York, always learning something new and sharing ideas
+            with the community.
           </p>
 
           <div className="profile__settings page-enter page-enter-delay-3">

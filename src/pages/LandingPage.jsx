@@ -27,7 +27,7 @@ export default function LandingPage() {
             Welcome to <span className="landing__highlight">PopX</span>
           </h1>
           <p className="landing__subtitle page-enter page-enter-delay-2">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+            Your all-in-one platform to connect, grow, and manage your business effortlessly.
           </p>
 
           <div className="landing__features page-enter page-enter-delay-2">

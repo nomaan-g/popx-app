@@ -36,7 +36,7 @@ export default function LoginPage() {
           </div>
           <h1 className="login__title">Signin to your PopX account</h1>
           <p className="login__subtitle">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+            Enter your credentials to access your account and pick up where you left off.
           </p>
         </div>
 
