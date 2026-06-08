@@ -1,0 +1,19 @@
+.page-wrapper {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  background-color: var(--color-bg-page);
+}
+
+.mobile-frame {
+  width: var(--mobile-width);
+  min-height: var(--mobile-height);
+  background-color: var(--color-bg-mobile);
+  border: 1px solid #e8e8e8;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
